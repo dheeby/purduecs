@@ -1,0 +1,32 @@
+*******************************************
+***Lab 3: README (Neil Allison, nalliso)***
+*******************************************
+
+Part 1: Thread Creation
+-----------------------
+3. When running the program thr1.cc without modifying the contents, it printed a random combination of A's, B's, and C's.
+4. (See thr1.cc for updated program) When running the program with the two added threads printing "D" and "E", it still only printed combinations of A's, B's, and C's but did not print any D's or E's. If the two new threads are added before the 'printC("C")', then it will print a random combination of A's, B's, C's, D's, and E's. This is how my current included version of thr1.cc is done.
+5. When running the program thr2.cc, the program just printed C's. The reason it only prints C's and does not print the rest is because when the main method starts, it is on its own thread. Once it reaches the line where 'printC("C")' is called, it enters the method and indefinitely (while(1)) prints the character passed as argument ("C"). Since the main thread is the only thread of execution currently created in the program, it will never need to give up the CPU to any other threads. If we wanted A and B to print as well, we would need to create these two threads before we call printC("C"). This way, we would have 3 threads running, each printing its own letter, but with the ability to give up the CPU to each other so that they can all run.
+
+Part 2: Mutual Exclusion
+------------------------
+**(See count.cc for updated program with mutex lock)**
+
+Part 3: Spin Locks
+------------------
+
+Time Comparison Table
+--------------------------------------------------------------------------------------------------
+|                                       |System (Kernel) Time   |    User Time   |   Real Time   |
+--------------------------------------------------------------------------------------------------
+|pthread_mutex(count)                   |        1.380s         |      1.512s    |    1.496s     |
+|spin_lock(count_spin with thr_yield)   |        0.136s         |      0.428s    |    0.305s     |
+|spin_lock(count_spin w/o thr_yield)    |        0.000s         |      1.900s    |    1.004s     |
+--------------------------------------------------------------------------------------------------
+
+1. The program count_spin had a faster user time with pthread_yield than without pthread_yield because calling pthread_yield allows that thread to give up all use of the processor to any other thread so that they do not have to wait for the thread that calls it.
+2. The system time was much faster in count_spin with thread_yield than count because count used a mutex lock which in turn calls wait(), however, count_spin used a spin lock which is fast for short blocks of code since it does not have to call wait().
+
+Part 4: Deadlocks
+-----------------
+**(See deadlock.cc for updated program with deadlock fixed)**

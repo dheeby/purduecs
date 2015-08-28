@@ -1,0 +1,14 @@
+~Test Case 1~
+Number of updates: 24
+Top Two Songs for query 1: 5 (194); 1 (193)
+Top Two Songs for query 2: 1 (194); 5 (194)
+Top Two Songs for query 3: 2 (199); 1 (196)
+Top Two Songs for query 4: 2 (200); 1 (196)
+
+
+~Test Case 2~
+Number of updates: 26
+Top Two Songs for query 1: 0 (1); 1 (1)
+Top Two Songs for query 2: 0 (2); 1 (2)
+Top Two Songs for query 3: 2 (10); 1 (4)
+Top Two Songs for query 4: 2 (11); 0 (5)

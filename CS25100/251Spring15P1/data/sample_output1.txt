@@ -1,0 +1,5 @@
+Testcase 1: (3)
+Output for testcase 1
+L: 3 *
+LL: 3 *
+RR: 3 *

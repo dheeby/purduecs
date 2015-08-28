@@ -1,0 +1,41 @@
+*********************************
+**** Neil Allison  (nalliso) ****
+** Lab 2: Shell Project README **
+*********************************
+
+Working Features:
+    - Ignoring ctrl-c in the shell
+    - Exit shell with "exit" command
+    - Wildcard expansion
+    - Print environment variables with "printenv" command
+    - Set environment variables with "setenv" command
+    - Remove environment variables with "unsetenv" command
+    - Kill zombie background processes
+    - Change directories with "cd" command
+        - If directory specified, goes to that directory
+        - If no directory specified, goes to home directory
+    - Allow running commands with pipes and IO redirection without spaces
+    - Allow quotes for passing arguments with spaces
+    - Allow escape characters
+    - Expand environment variables given in the form ${VARNAME} in arguments
+    - Tilde expansion
+        - If a tilde is by itself or before a /, it is expanded to the home directory
+        - If a tilde is before a word, it expands up to the first tilde or end of the argument for the home directory of the user with specified login
+    - Suppresses shell prompt when standard input is a file
+    - Subshell: expressions in backticks run in a shell and the output replaced where the backticks were
+    - Edit (Raw) Mode Features:
+        - Usage (ctrl-?): display the features of the shell
+        - Left arrow key to move cursor
+        - Right arrow key to move cursor
+        - Delete (ctrl-D): removes the character to the right of the cursor and shifts the following characters left
+        - Backspace (ctrl-H): removes the character to the left of the cursor and shifts the following characters left
+        - Home (ctrl-A): moves the cursor to the beginning of the line
+        - End (ctrl-E): moves the cursor to the end of the line
+        - Up arrow: displays the next oldest command
+        - Down arrow: displays the next newest command
+
+Non-Working Features:
+    - None that I know of.
+
+Extra Features:
+    - Tab completion

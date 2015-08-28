@@ -1,0 +1,10 @@
+Testcase 1: (3,(4),(5))
+Output for testcase 1
+Query 1: (3)
+L
+R
+ROOT
+Query 2: R
+ROOT
+Query 3: RRL
+NONE

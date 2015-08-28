@@ -1,0 +1,3 @@
+./towords   < in1                   : 4   of 4  
+./towords   < in2                   : 4   of 4  
+./towords   < hamlet                : 3   of 3  

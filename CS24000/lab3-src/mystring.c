@@ -1,0 +1,80 @@
+
+#include <stdlib.h>
+#include "mystring.h"
+
+int mystrlen(char * s) {
+  int i = 0;
+  while (s[i] != '\0') {
+    i++;
+  }
+  return i;
+}
+
+char * mystrcpy(char * dest, char * src) {
+  int i = 0;
+  while (src[i] != '\0') {
+    dest[i] = src[i];
+    i++;
+  }
+  dest[i] = '\0';
+  return dest;
+}
+
+char * mystrcat(char * dest, char * src) {
+  int len = mystrlen(dest);
+  int i = 0;
+  while (src[i] != '\0') {
+    dest[len] = src[i];
+    len++;
+    i++;
+  }
+  dest[len] = '\0';
+  return dest;
+}
+
+int mystrcmp(char * s1, char * s2) {
+  int len1 = mystrlen(s1);
+  int len2 = mystrlen(s2);
+  if (len1 > len2) return 1;
+  if (len2 > len1) return -1;
+  int i;
+  for (i = 0; i < len1; i++) {
+	if (s1[i] > s2[i]) return 1;
+	if (s2[i] > s1[i]) return -1;
+	if (s1[i] == s2[i]) continue;
+  }
+  return 0;
+}
+
+char * mystrstr(char * hay, char * needle) {
+  int len1 = mystrlen(hay);
+  int len2 = mystrlen(needle);
+  int i, j, k;
+  for (i = 0; i <= len1 - len2; i++) {
+    k = i;
+    for (j = 0; j < len2; j++) {
+      if (hay[k] != needle[j]) {
+	break;
+      }
+      k++;
+    }
+    if (j == len2) return &hay[i];
+  }
+  return NULL;
+}
+
+char * mystrdup(char * s) {
+  int len = mystrlen(s);
+  char * dup = (char*)malloc(len * sizeof(char));
+  mystrcpy(dup, s);
+  return dup;
+}
+
+char * mymemcpy(char * dest, char * src, int n)
+{
+  int i;
+  for (i = 0; i < n; i++) {
+    dest[i] = src[i];
+  }
+  return dest;
+}

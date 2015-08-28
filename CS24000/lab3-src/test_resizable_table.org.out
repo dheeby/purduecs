@@ -1,0 +1,19 @@
+Running test16
+
+======== Table =======
+currentElements=0 maxElements=10
+======== End Table =======
+Read non existing table
+result1=0
+Read friends.rt
+result2=1
+
+======== Table =======
+currentElements=6 maxElements=10
+0: "Rachael" 86
+1: "Monica" 95
+2: "Phoebe" 85
+3: "Joey" 84
+4: "Ross" 92
+5: "Chandler" 90
+======== End Table =======

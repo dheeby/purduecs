@@ -1,0 +1,18 @@
+*********************************
+**** Neil Allison  (nalliso) ****
+*** Lab 4: HTTP Server README ***
+*********************************
+
+Working Features:
+    - Handling document requests
+    - Sending documents
+    - Concurrency
+        - New process for each request
+        - New thread for each request
+        - Pool of threads
+    - URL to File Mapping
+    - Running CGI scripts
+Non-Working Features:
+    - None that I know of.
+Extra Features:
+    - None

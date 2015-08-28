@@ -1,0 +1,14 @@
+~Test Case 1~
+HEAP AFTER: 
+Play Count: 194
+Play Count: 193
+Play Count: 193
+Play Count: 1
+Play Count: 123
+Play Count: 190
+Count: 123	Position: 2
+Count: 193	Position: 4
+Count: 190	Position: 0
+Count: 1	Position: 3
+Count: 193	Position: 1
+Count: 194	Position: 2

@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=ISO-8859-1">
+  <meta name="Author" content="Gustavo Rodriguez-Rivera">
+  <meta name="GENERATOR"
+ content="Mozilla/4.79 [en] (X11; U; SunOS 5.6 sun4u) [Netscape]">
+  <title>lab1</title>
+</head>
+<body>
+<center>
+<h1>CS240 Lab7</h1>
+<br>
+<div style="text-align: left;"><a href="Lab7Report-1.html">Lab Report
+Week 1</a> <br>
+</div>
+<br>
+</center>
+<center>
+<h2>Writing Your Own C++ String Package and a Simple Text to Speech
+Program<br>
+</h2>
+</center>
+<h2>Goal</h2>
+<b>In this lab you will learn some C++ features such a operator
+overloading. You
+will&nbsp; implement your own String C++ class<br>
+</b>
+<h2>Part 1. Download the Initial Sources and Tests<br>
+</h2>
+1. Copy the initial file into
+your
+working directory and untar the file:<br>
+<blockquote>
+  <div style="margin-top: -3px; margin-bottom: -3px;"><font
+ face="Courier New">cp /homes/cs240/2014Fall/lab7-cpp-tts/lab7-src.tar .<br>
+  </font></div>
+  <div style="margin-top: -3px; margin-bottom: -3px;"><font
+ face="Courier New">tar
+-xvf lab7-src.tar</font></div>
+</blockquote>
+<div style="margin-top: -3px; margin-bottom: -3px;">
+<h2 style="margin-top: -3px; margin-bottom: -3px;">Part 2. Implementing
+Stack class</h2>
+<br>
+Implement the Stack class and make sure the TestStack runs correctly.
+Run the testall script.<br>
+<br>
+</div>
+<h2 style="margin-top: -3px; margin-bottom: -3px;">
+Part 3. Implementing MyString class<br>
+</h2>
+<div style="margin-top: -3px; margin-bottom: -3px;"><br>
+Modify the file "MyString.cc"
+to implement your own MyString class that stores internally the string
+as a C string. This class will make strng manipulation easier. See the
+interface in MyString.h<br>
+</div>
+<br>
+Your goal is to make all the tests that test the different methods. Run
+the following tests:<br>
+<br>
+TestMyString test1<br>
+TestMyString test2<br>
+TestMyString test3<br>
+TestMyString test4<br>
+TestMyString test5<br>
+TestMyString test6<br>
+...<br>
+TestMyString test11<br>
+<h2>Part 4. Implement the Sound class</h2>
+Implement the Sound class described in Sound.h and Sound.cc Use
+the example in lab6 simple-gen.c as base. Write well structured code
+with comments since it will be checked during your lab time.<br>
+<h2>Part 5. Implementing Text to Speech <br>
+</h2>
+Write a program <br>
+<br>
+&nbsp; ./TextToSpeech phrase wavefile<br>
+&nbsp; <br>
+Example:<br>
+<br>
+&nbsp; ./TextToSpeech "Hello world" hello.wav<br>
+<br>
+that will generate the speech that corresponds to the phrase "Hello
+world" using your own voice and it will write it in the file hello.wav.<br>
+<br>
+You will generate the text to speech as follows:<br>
+<ul>
+  <li>Download the program "Audacity" from audacity.sourceforge.com</li>
+  <li>Record with your own voice each of the folowing words and name
+the file &lt;word&gt;.wav. Save them as WAV 16bit signed. Record just a
+few words initially to test your program. Record the rest when you are
+sure your program works correctly. Save them using the option
+File-&gt;Export-&gt;wave 16bit signed.<br>
+  </li>
+</ul>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; time, good, to, the, person,
+have, new, of, and, year, do, first, in, a, way, say, last, for, that,
+day, get, <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; long, on, I, thing, make, great,
+with, it, man, world, life, hand, part, child, eye, woman, place, work,
+week.<br>
+<ul>
+  <li>Parse the phrase passed as argument into words. Discard all the
+punctuation marks and change it to lower case. Using the Sound class
+you wrote, read the
+corresponding wav files for these words and append them into a
+single sound. Write the resulting sound into the wavefile passed as
+argument. If the word does not have a corresponding sound file skip it.
+Write a silence of about .05secs between each word.</li>
+</ul>
+You will show your texttospeech program during the lab.<br>
+<h2>Turning in Your Project</h2>
+Follow these instructions to turnin lab7. Make sure to run the testall
+script often since your lab will be graded using this script.<br>
+<ol>
+  <li>Login to your data acocunt.</li>
+  <li>Change to the directory above <i>lab7-src.</i></li>
+  <li>Type "<tt>turnin -c cs240 -p lab7 lab7-src</tt>"</li>
+  <li>Type&nbsp; "<tt>turnin -c cs240 -p lab7 -v</tt>" to
+make sure you have submitted the right files.</li>
+</ol>
+The deadline for this lab is Monday November 24th, 2014, 11:59pm.
+<br>
+<br>
+&nbsp;<br>
+<br>
+&nbsp;
+</body>
+</html>
